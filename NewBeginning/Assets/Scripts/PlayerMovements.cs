@@ -9,6 +9,9 @@ public class PlayerMovements : MonoBehaviour
 
     private Rigidbody2D body;
     private BoxCollider2D boxCollider2D;
+    private Animator anim;
+    private bool grounded;
+
 
     private void Awake()
     {
@@ -21,7 +24,11 @@ public class PlayerMovements : MonoBehaviour
         body.velocity = new Vector2(speed, body.velocity.y) ;
 
         if (Input.GetKey(KeyCode.Space) && IsGrounded())
+        {
             body.velocity = new Vector2(body.velocity.x, speed);
+            anim.SetTrigger("jump");
+        }
+            
     }
 
     private bool IsGrounded() {
