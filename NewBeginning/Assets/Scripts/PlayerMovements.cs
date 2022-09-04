@@ -11,6 +11,8 @@ public class PlayerMovements : MonoBehaviour
     private Animator anim;
     private bool grounded;
     private bool slideAuthority;
+    private bool fall;
+    private float velocityY = 5f;
 
     private void Awake()
     {
@@ -21,11 +23,21 @@ public class PlayerMovements : MonoBehaviour
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
 
+        
+        if (velocityY > body.velocity.y)
+        {
+            fall = true;
+        }
+        else
+        {
+            fall = false;
+        }
         body.velocity = new Vector2(speed, body.velocity.y);
 
+        velocityY = body.velocity.y;
 
 
         if (Input.GetKey(KeyCode.Space) && grounded)
@@ -35,8 +47,13 @@ public class PlayerMovements : MonoBehaviour
             Slide();
         }
         //sets animation parameters
-
+        anim.SetBool("fall", fall);
         anim.SetBool("grounded", grounded);
+    }
+
+    private void Update()
+    {
+      
     }
 
     private void Jump()
