@@ -11,15 +11,15 @@ public class Death : MonoBehaviour
      void OnTriggerEnter2D(Collider2D other)
     {
         //StartCoroutine(Catch());
-        RestartScene();
+       DeathScene();
        
     }
 
-    public void RestartScene()
+    public void DeathScene()
     {
         
-        Scene thisScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(thisScene.name);
+        
+        SceneManager.LoadScene(2);
     }
 
     //IEnumerator Catch()
