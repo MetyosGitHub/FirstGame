@@ -6,6 +6,7 @@ public class PlayerMovements : MonoBehaviour
 {
 
     [SerializeField] private float speed;
+    [SerializeField] private float jump;
     private BoxCollider2D boxCollider;
     private Rigidbody2D body;
     private Animator anim;
@@ -42,7 +43,7 @@ public class PlayerMovements : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && grounded)
             Jump();
-        if (Input.GetKey(KeyCode.LeftShift) && grounded && slideAuthority)
+        if (Input.GetKey(KeyCode.LeftShift)  && slideAuthority)
         {
             Slide();
         }
@@ -58,7 +59,7 @@ public class PlayerMovements : MonoBehaviour
 
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed);
+        body.velocity = new Vector2(body.velocity.x, jump);
         anim.SetTrigger("jump");
         grounded = false;
     }
