@@ -7,6 +7,9 @@ public class PlayerMovements : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private float jump;
+    [SerializeField] private AudioSource running;
+    [SerializeField] private AudioSource backgroundMusic;
+    [SerializeField] private AudioSource jumping;
     private BoxCollider2D boxCollider;
     private Rigidbody2D body;
     private Animator anim;
@@ -26,7 +29,19 @@ public class PlayerMovements : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        if(grounded&&!running.isPlaying)
+        {
+            running.Play();
+            
+        }
+        else if(!grounded)
+        {
+            running.Stop();
+        }
+        //else if(grounded && running.isPlaying)
+        //{ 
+        //    running.
+        //}
         
         if (velocityY > body.velocity.y)
         {
@@ -39,8 +54,7 @@ public class PlayerMovements : MonoBehaviour
         body.velocity = new Vector2(speed, body.velocity.y);
 
         velocityY = body.velocity.y;
-
-
+        
         if (Input.GetKey(KeyCode.Space) && grounded)
             Jump();
         if (Input.GetKey(KeyCode.LeftShift)  && slideAuthority)
@@ -60,6 +74,7 @@ public class PlayerMovements : MonoBehaviour
     private void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, jump);
+        jumping.Play();
         anim.SetTrigger("jump");
         grounded = false;
     }
@@ -95,6 +110,12 @@ public class PlayerMovements : MonoBehaviour
         
 
 
+    }
+
+    IEnumerator playSound()
+    {
+        yield return new WaitForSeconds(11f);
+        yield break;
     }
 }
 //
