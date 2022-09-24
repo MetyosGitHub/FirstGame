@@ -3356,8 +3356,8 @@ TextureImporter:
       name: TX Village Props_133
       rect:
         serializedVersion: 2
-        x: 768
-        y: 768
+        x: 964
+        y: 774
         width: 32
         height: 32
       alignment: 0
@@ -3377,8 +3377,8 @@ TextureImporter:
       name: TX Village Props_134
       rect:
         serializedVersion: 2
-        x: 800
-        y: 768
+        x: 912
+        y: 769
         width: 32
         height: 32
       alignment: 0
@@ -3650,8 +3650,8 @@ TextureImporter:
       name: TX Village Props_147
       rect:
         serializedVersion: 2
-        x: 768
-        y: 736
+        x: 781
+        y: 787
         width: 32
         height: 32
       alignment: 0
@@ -3671,8 +3671,8 @@ TextureImporter:
       name: TX Village Props_148
       rect:
         serializedVersion: 2
-        x: 800
-        y: 736
+        x: 844
+        y: 782
         width: 32
         height: 32
       alignment: 0
@@ -3902,8 +3902,8 @@ TextureImporter:
       name: TX Village Props_159
       rect:
         serializedVersion: 2
-        x: 768
-        y: 704
+        x: 976
+        y: 694
         width: 32
         height: 32
       alignment: 0
@@ -3923,10 +3923,10 @@ TextureImporter:
       name: TX Village Props_160
       rect:
         serializedVersion: 2
-        x: 800
-        y: 704
-        width: 32
-        height: 32
+        x: 776
+        y: 702
+        width: 49
+        height: 71
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7118,11 +7118,11 @@ TextureImporter:
       TX Village Props_231: 288137517
       TX Village Props_73: 923438407
       TX Village Props_118: -1926112681
-      TX Village Props_13: -1235859654
+      TX Village Props_109: 1531002892
       TX Village Props_79: -1189389721
       TX Village Props_272: 1204487535
       TX Village Props_225: 543073446
-      TX Village Props_109: 1531002892
+      TX Village Props_13: -1235859654
       TX Village Props_230: -1695889705
       TX Village Props_131: -809682695
       TX Village Props_250: 2020420556
