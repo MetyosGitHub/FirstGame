@@ -10,6 +10,7 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] private AudioSource running;
     [SerializeField] private AudioSource backgroundMusic;
     [SerializeField] private AudioSource jumping;
+    [SerializeField] private AudioSource sliding;
     private BoxCollider2D boxCollider;
     private Rigidbody2D body;
     private Animator anim;
@@ -74,6 +75,7 @@ public class PlayerMovements : MonoBehaviour
     private void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, jump);
+        running.Stop();
         jumping.Play();
         anim.SetTrigger("jump");
         grounded = false;
@@ -82,7 +84,11 @@ public class PlayerMovements : MonoBehaviour
     private void Slide()
     {
         slideAuthority = false;
-
+        if(grounded)
+        {
+            sliding.Play();
+        }
+        
         anim.SetTrigger("slide");
         body.velocity = new Vector2(speed * 0.8f, body.velocity.y);
         boxCollider.enabled = false;
