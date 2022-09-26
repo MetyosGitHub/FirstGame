@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Death : MonoBehaviour
+public class NextLevel : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private Transform respawnPoint;
 
-     void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         //StartCoroutine(Catch());
-       DeathScene();
-       
+        DeathScene();
+
     }
 
     public void DeathScene()
     {
-        
-        
-        SceneManager.LoadScene(3);
+
+
+        SceneManager.LoadScene(2);
     }
 
     //IEnumerator Catch()
