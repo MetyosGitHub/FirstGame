@@ -11,8 +11,8 @@ public class NextLevel : MonoBehaviour
     {
        if(other.tag == "Player")
         {
-            SceneManager.LoadScene("Level1");
-            Debug.Log("loaded next level");
+            Scene thisScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(thisScene.buildIndex + 1);
         }
     }
 

@@ -19,6 +19,10 @@ public class MainMenu : MonoBehaviour
     {
 
         Scene thisScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(thisScene.buildIndex-1);
+        SceneManager.LoadScene("Level1");
+    }
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("Cutscene");
     }
 }

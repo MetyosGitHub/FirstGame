@@ -16,7 +16,7 @@ TagManager:
   - Platforms
   - Enemy
   - ReallyBACKGROUND
-  - 
+  - novlayerr
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Layer1
     uniqueID: 3139740159
+    locked: 0
+  - name: nov
+    uniqueID: 1372357537
     locked: 0

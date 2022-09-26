@@ -19,7 +19,7 @@ public class Death : MonoBehaviour
     {
         
         
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     //IEnumerator Catch()
