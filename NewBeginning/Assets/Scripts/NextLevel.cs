@@ -5,22 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    [SerializeField] private Transform player;
-    [SerializeField] private Transform respawnPoint;
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //StartCoroutine(Catch());
-        DeathScene();
-
+       if(other.tag == "Player")
+        {
+            SceneManager.LoadScene("Level1");
+            Debug.Log("loaded next level");
+        }
     }
 
-    public void DeathScene()
-    {
-
-
-        SceneManager.LoadScene(2);
-    }
+    
 
     //IEnumerator Catch()
     //{
