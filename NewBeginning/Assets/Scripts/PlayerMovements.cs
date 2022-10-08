@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerMovements : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] private AudioSource backgroundMusic;
     [SerializeField] private AudioSource jumping;
     [SerializeField] private AudioSource sliding;
+    [SerializeField] private CinemachineVirtualCamera cameraToZoom;
+    public Vector3[] Target;
     private BoxCollider2D boxCollider;
     private Rigidbody2D body;
     private Animator anim;
+   
     private bool grounded;
     private bool slideAuthority;
     private bool fall;
@@ -25,6 +29,7 @@ public class PlayerMovements : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        
 
     }
 
@@ -102,9 +107,21 @@ public class PlayerMovements : MonoBehaviour
         {
             grounded = true;
             slideAuthority = true;
+            
+        }
+
+        if(collision.gameObject.tag == "Transition")
+        {
+            //cameraToZoom.GetComponentInChildren(Cinemachine.CinemachineVirtualCamera) 
+            TransitionCamera();
         }
 
 
+    }
+    private void TransitionCamera()
+    {
+        cameraToZoom.m_Lens.OrthographicSize = Mathf.Lerp(cameraToZoom.m_Lens.OrthographicSize, 7, 0.080f);
+        cameraToZoom.transform.position = Vector3.Lerp(cameraToZoom.transform.position, Target[1], 0.080f);
     }
 
     IEnumerator stopSlide()
