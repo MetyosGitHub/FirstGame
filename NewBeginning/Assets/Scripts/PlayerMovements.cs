@@ -8,6 +8,7 @@ public class PlayerMovements : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private float jump;
+    [SerializeField] private float cameraSpeed;
     [SerializeField] private AudioSource running;
     [SerializeField] private AudioSource runningGravel;
     [SerializeField] private AudioSource runningBuilding;
@@ -25,7 +26,9 @@ public class PlayerMovements : MonoBehaviour
     private bool grounded;
     private bool slideAuthority;
     private bool fall;
+    private bool needToZoom;
     private float velocityY = 5f;
+
 
     private void Awake()
     {
@@ -39,7 +42,20 @@ public class PlayerMovements : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(grounded&&!running.isPlaying)
+        if(needToZoom)
+        {
+            cameraToZoom.m_Lens.OrthographicSize = Mathf.Lerp(cameraToZoom.m_Lens.OrthographicSize, 7, cameraSpeed);
+        }
+        //while (needToZoom)
+        //{
+        //    while (cameraToZoom.m_Lens.OrthographicSize <= 7)
+        //    {
+        //        cameraToZoom.m_Lens.OrthographicSize = Mathf.Lerp(cameraToZoom.m_Lens.OrthographicSize, 8, cameraSpeed);
+
+        //    }
+        //    needToZoom = false;
+        //}
+        if (grounded&&!running.isPlaying)
         {
             //running.Play();
             
@@ -165,20 +181,15 @@ public class PlayerMovements : MonoBehaviour
             }
         }
 
-        //if(collision.gameObject.tag == "Transition")
-        //{
-        //    //cameraToZoom.GetComponentInChildren(Cinemachine.CinemachineVirtualCamera) 
-        //    //TransitionCamera();
-        //}
+        if (collision.gameObject.tag == "Transition")
+        {
+            needToZoom = true;
+           
+        }
 
 
     }
-    //private void TransitionCamera()
-    //{
-    //    cameraToZoom.m_Lens.OrthographicSize = Mathf.Lerp(cameraToZoom.m_Lens.OrthographicSize, 7, 0.080f);
-    //    cameraToZoom.transform.position = Vector3.Lerp(cameraToZoom.transform.position, Target[1], 0.080f);
-    //}
-
+   
     IEnumerator stopSlide()
     {
         yield return new WaitForSeconds(0.75f);
