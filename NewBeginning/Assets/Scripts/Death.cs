@@ -7,20 +7,55 @@ public class Death : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private Transform respawnPoint;
+    private Scene scene;
+    private string place;
 
-     void OnTriggerEnter2D(Collider2D other)
+
+    private void Awake()
     {
-        //StartCoroutine(Catch());
-       DeathScene();
+        scene = SceneManager.GetActiveScene();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        place = other.gameObject.tag;
+        DeathMenu();
        
     }
-
-    public void DeathScene()
+    void DeathMenu()
     {
-        
-        
-        SceneManager.LoadScene(4);
+        switch (scene.name)
+        {
+            case ("Level1"):
+                {
+                    SceneManager.LoadScene(2);
+                    break;
+                }
+            case ("Level2"):
+                {
+                    SceneManager.LoadScene(5);
+                    break;
+
+                }
+            case ("Death1"):
+                {
+                    SceneManager.LoadScene(5);
+                    break;
+
+                }
+            case ("Death2"):
+                {
+                    SceneManager.LoadScene(5);
+                    break;
+
+                }
+
+            default:
+                break;
+        }
     }
+
+    
 
     //IEnumerator Catch()
     //{

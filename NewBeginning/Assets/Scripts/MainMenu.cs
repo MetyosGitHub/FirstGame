@@ -23,6 +23,6 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayAgain()
     {
-        SceneManager.LoadScene("Cutscene");
+        SceneManager.LoadScene("CutsceneStartLevel1");
     }
 }

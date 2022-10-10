@@ -37,6 +37,7 @@ public class PlayerMovements : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         
+        
 
     }
 
@@ -46,18 +47,10 @@ public class PlayerMovements : MonoBehaviour
         {
             cameraToZoom.m_Lens.OrthographicSize = Mathf.Lerp(cameraToZoom.m_Lens.OrthographicSize, 7, cameraSpeed);
         }
-        //while (needToZoom)
-        //{
-        //    while (cameraToZoom.m_Lens.OrthographicSize <= 7)
-        //    {
-        //        cameraToZoom.m_Lens.OrthographicSize = Mathf.Lerp(cameraToZoom.m_Lens.OrthographicSize, 8, cameraSpeed);
-
-        //    }
-        //    needToZoom = false;
-        //}
+       
         if (grounded&&!running.isPlaying)
         {
-            //running.Play();
+            
             
         }
         else if(!grounded)
@@ -66,14 +59,12 @@ public class PlayerMovements : MonoBehaviour
             runningBuilding.Stop();
             runningGravel.Stop();
         }
-        //else if(grounded && running.isPlaying)
-        //{ 
-        //    running.
-        //}
+       
         
         if (velocityY > body.velocity.y)
         {
             fall = true;
+            
         }
         else
         {
@@ -83,8 +74,14 @@ public class PlayerMovements : MonoBehaviour
 
         velocityY = body.velocity.y;
         
-        if (Input.GetKey(KeyCode.Space) && grounded)
-            Jump();
+        if (grounded)
+        {
+            if(Input.GetKey(KeyCode.Space))
+            {
+                 Jump();
+            }
+        }
+           
         if (Input.GetKey(KeyCode.LeftShift)  && slideAuthority)
         {
             Slide();
@@ -152,9 +149,10 @@ public class PlayerMovements : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        grounded = true;
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Gravel" || collision.gameObject.tag == "Building")
         {
-            grounded = true;
+            
             slideAuthority = true;
             switch(collision.gameObject.tag)
             {
