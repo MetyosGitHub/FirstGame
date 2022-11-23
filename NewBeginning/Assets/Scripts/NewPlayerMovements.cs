@@ -32,9 +32,10 @@ public class NewPlayerMovements : MonoBehaviour
 
 
         //Movement and Jump and Slide
-        body.velocity = new Vector2(speed, body.velocity.y);
+       
         if (grounded)
         {
+            body.velocity = new Vector2(speed, body.velocity.y);
             if (Input.GetKey(KeyCode.Space))
             {
                 Jump();
@@ -45,7 +46,7 @@ public class NewPlayerMovements : MonoBehaviour
             Slide();
         }
         //Animations about Falling
-        if (velocityY > body.velocity.y)
+        if (velocityY > body.velocity.y+0.1)
         {
             fall = true;
         }
@@ -56,6 +57,7 @@ public class NewPlayerMovements : MonoBehaviour
         velocityY = body.velocity.y;
 
         anim.SetBool("fall", fall);
+        
         anim.SetBool("grounded", grounded);
     }
 
@@ -78,6 +80,7 @@ public class NewPlayerMovements : MonoBehaviour
         
         if (collision.gameObject.tag == "Ground")
             grounded = true;
+       
     }
 
     IEnumerator stopSlide()
