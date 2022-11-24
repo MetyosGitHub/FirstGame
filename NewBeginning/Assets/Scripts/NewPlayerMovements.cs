@@ -80,6 +80,7 @@ public class NewPlayerMovements : MonoBehaviour
         
         if (collision.gameObject.tag == "Ground")
             grounded = true;
+
        
     }
 
