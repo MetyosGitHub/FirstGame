@@ -6,6 +6,8 @@ public class Level4Portals : MonoBehaviour
 {
     [SerializeField] public float gravity;
     [SerializeField] public Rigidbody2D bodyToGiveGravity;
+    [SerializeField] public float timeToStartExecuting;
+
     private bool toRun = false;
     private BoxCollider2D boxCollider;
     
@@ -23,7 +25,7 @@ public class Level4Portals : MonoBehaviour
 
         if (toRun == true)
         {
-            bodyToGiveGravity.gravityScale = gravity;
+            StartCoroutine(Portals());
         }
 
     }
@@ -33,5 +35,12 @@ public class Level4Portals : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
             toRun = true;
+    }
+
+    public IEnumerator Portals()
+    {
+        yield return new WaitForSeconds(timeToStartExecuting);
+        bodyToGiveGravity.gravityScale = gravity;
+        yield break;
     }
 }
