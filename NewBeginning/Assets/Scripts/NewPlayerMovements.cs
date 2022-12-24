@@ -60,7 +60,7 @@ public class NewPlayerMovements : MonoBehaviour
         
         anim.SetBool("grounded", grounded);
     }
-
+    //Method for jumping
     private void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, jump);
@@ -68,13 +68,14 @@ public class NewPlayerMovements : MonoBehaviour
         anim.SetTrigger("jump");
         grounded = false;
     }
+    //Method for sliding
     private void Slide()
     {
         anim.SetTrigger("slide");
         body.velocity = new Vector2(speed * 0.8f, body.velocity.y);
         StartCoroutine(stopSlide());
     }
-
+    //Check if Player's body has collided with the ground
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -83,7 +84,7 @@ public class NewPlayerMovements : MonoBehaviour
 
        
     }
-
+    //Enumerator for stopping and controlling the Slide
     IEnumerator stopSlide()
     {
         boxCollider.enabled = false;
