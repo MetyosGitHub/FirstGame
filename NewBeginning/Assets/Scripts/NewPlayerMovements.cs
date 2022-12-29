@@ -51,7 +51,7 @@ public class NewPlayerMovements : MonoBehaviour
             Slide();
         }
         //Animations about Falling
-        if (velocityY > body.velocity.y+0.0001)
+        if (velocityY > body.velocity.y+0.1)
         {
            
                 running.Stop();
