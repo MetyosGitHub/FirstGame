@@ -38,4 +38,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathMenu.unity
     guid: 67ba0b36b116e83449cf58f96f189c4f
+  - enabled: 1
+    path: Assets/Scenes/Level3/CutsceneStartLevel3.unity
+    guid: 2207a220572668645ad1f78fc850ace6
+  - enabled: 1
+    path: Assets/Scenes/Level3/Level3.unity
+    guid: b8f4956a714db0240a52948beca7441f
+  - enabled: 1
+    path: Assets/Scenes/Level3/CutsceneEndLevel3.unity
+    guid: 6e872350f29ba164297e02024538be48
+  - enabled: 1
+    path: Assets/Scenes/Level4/Level4.unity
+    guid: d7d68c31d1a818d47a4dc7123db5d372
   m_configObjects: {}

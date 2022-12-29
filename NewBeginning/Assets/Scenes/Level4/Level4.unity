@@ -39020,7 +39020,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1497731865}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: -0
@@ -77946,6 +77946,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: 6.5
+  running: {fileID: 1497731870}
+  jumping: {fileID: 1497731872}
+  slide: {fileID: 1497731874}
 --- !u!82 &1497731867
 AudioSource:
   m_ObjectHideFlags: 0
@@ -80351,7 +80354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891796798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 394.63498, y: 5.8900003, z: -10}
+  m_LocalPosition: {x: 392.0107, y: 5.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -80428,7 +80431,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

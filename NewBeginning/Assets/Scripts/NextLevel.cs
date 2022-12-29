@@ -43,12 +43,27 @@ public class NextLevel : MonoBehaviour
                     }
                 case ("CutsceneEndLevel2"):
                     {
-                        StartCoroutine(LoadLevel(9));
+                        StartCoroutine(LoadLevel(11));
                         break;
                     }
                 case ("CutsceneStartLevel2"):
                     {
                         StartCoroutine(LoadLevel(5));
+                        break;
+                    }
+                case ("CutsceneStartLevel3"):
+                    {
+                        StartCoroutine(LoadLevel(12));
+                        break;
+                    }
+                case ("Level3"):
+                    {
+                        StartCoroutine(LoadLevel(13));
+                        break;
+                    }
+                case ("CutsceneEndLevel3"):
+                    {
+                        StartCoroutine(LoadLevel(14));
                         break;
                     }
 

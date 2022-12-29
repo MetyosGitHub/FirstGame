@@ -49,6 +49,12 @@ public class Death : MonoBehaviour
                     break;
 
                 }
+            case ("Level3"):
+                {
+                    SceneManager.LoadScene(12);
+                    break;
+
+                }
 
             default:
                 break;
