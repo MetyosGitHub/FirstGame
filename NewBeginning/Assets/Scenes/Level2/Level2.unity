@@ -93196,7 +93196,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -93928,10 +93928,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614019424}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2c35f5f3ac738534a80ff44b06e7bacb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 78fc123441a146e4ea6362261adcb941, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.057
   m_Pitch: 1

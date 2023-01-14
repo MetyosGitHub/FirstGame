@@ -2518,6 +2518,8 @@ MonoBehaviour:
   gravity: 0.5
   bodyToGiveGravity: {fileID: 629761528}
   timeToStartExecuting: 0
+  anim: {fileID: 0}
+  portal: {fileID: 0}
 --- !u!114 &455260911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18357,6 +18359,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: 6
+  running: {fileID: 0}
+  jumping: {fileID: 0}
+  slide: {fileID: 0}
 --- !u!1 &1024528072
 GameObject:
   m_ObjectHideFlags: 0
@@ -18728,6 +18733,8 @@ MonoBehaviour:
   gravity: 1
   bodyToGiveGravity: {fileID: 675315901}
   timeToStartExecuting: 1
+  anim: {fileID: 0}
+  portal: {fileID: 0}
 --- !u!114 &1047728269
 MonoBehaviour:
   m_ObjectHideFlags: 0
