@@ -7,7 +7,9 @@ public class Level4Portals : MonoBehaviour
     [SerializeField] public float gravity;
     [SerializeField] public Rigidbody2D bodyToGiveGravity;
     [SerializeField] public float timeToStartExecuting;
-
+    [SerializeField] private Animator anim;
+    [SerializeField] private SpriteRenderer portal;
+    
     private bool toRun = false;
     private BoxCollider2D boxCollider;
     
@@ -39,8 +41,17 @@ public class Level4Portals : MonoBehaviour
 
     public IEnumerator Portals()
     {
+        anim.SetTrigger("open");
+        yield return new WaitForSeconds(0.2f);
+
+        anim.SetTrigger("opened");
         yield return new WaitForSeconds(timeToStartExecuting);
         bodyToGiveGravity.gravityScale = gravity;
+        yield return new WaitForSeconds(0.5f);
+        anim.SetTrigger("close");
+        yield return new WaitForSeconds(0.5f);
+        portal.enabled = false;
+        
         yield break;
     }
 }
