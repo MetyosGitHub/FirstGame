@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 22878
+  controlID: 26886
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_SerializedViewNames: []
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
-  m_ShowGizmos: 1
+  m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
   m_TargetSize: {x: 1135, y: 519}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 22879
+  controlID: 26887
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 22880
+  controlID: 26888
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ca6b0000
+      m_SelectedIDs: ce690000
       m_LastClickedID: 0
-      m_ExpandedIDs: f688ffff008affffaadaffff3adcffff3addffff18e0ffff0efbffff406a0000a26a0000d2750000
+      m_ExpandedIDs: 9a53ffff3a56ffffbe56ffffdc57ffff2658ffff5e5affff685affff725affff805affff8e5affff985affffa25affffac5affffb85affffc25affffcc5afffff05afffffa5affff165bffff925bffff1a5cffffb05cffff4e5dffff365effff765effff1261ffff3264ffffe469ffff266affffac6affff1a6bffff646bffff626cffffae6cffffe26effffe86effffee6efffff86effff026fffff086fffff0e6fffff146fffff186fffff1e6fffff246fffff2e6fffff366fffff4a6fffff8c77ffffbc7ffffffe7fffffbc80ffff0a81ffffa082ffffea82ffff2285ffff2c85ffff3685ffff4485ffff5285ffff5c85ffff6685ffff7085ffff7c85ffff8685ffff9085ffffb485ffffc085ffffdc85fffff688ffff008affffaadaffff3adcffff3addffff18e0ffff0efbffff406a0000a26a0000d275000050390100028d0100ae9001002c910100b692010084b10100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 495.33517, y: 7.2962656, z: -0.0075080656}
+    m_Target: {x: 167.26529, y: 43.63161, z: -1.9082457}
     speed: 2
-    m_Value: {x: 495.33517, y: 7.2962656, z: -0.0075080656}
+    m_Value: {x: 161.1044, y: 44.597065, z: -1.8661916}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.650711
+    m_Target: 97.65982
     speed: 2
-    m_Value: 4.650711
+    m_Value: 93.45438
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -841,22 +841,22 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Level1
+    - Assets/Scenes/Level4
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes/Level1
+  - Assets/Scenes/Level4
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\DG\Projects\FirstGame\NewBeginning
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e2680000
-    m_LastClickedID: 26850
-    m_ExpandedIDs: 0000000050680000526800005468000056680000586800005a6800005c6800005e68000060680000626800006468000066680000d868000000ca9a3b
+    m_SelectedIDs: e8680000
+    m_LastClickedID: 26856
+    m_ExpandedIDs: 0000000050680000526800005468000056680000586800005a6800005c6800005e6800006068000062680000646800006668000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -909,21 +909,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ca6b0000
-    m_LastClickedInstanceID: 27594
+    m_SelectedInstanceIDs: ce690000
+    m_LastClickedInstanceID: 27086
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 3417010016a000004c690000f06900007a6900009a64000074f6000062690000ec9b00005c890000be7200005edd00000000000022640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: CutsceneStartLevel1
-      m_OriginalName: CutsceneStartLevel1
+      m_Name: CutsceneEndLevel1
+      m_OriginalName: CutsceneEndLevel1
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 27594
+      m_UserData: 27592
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
