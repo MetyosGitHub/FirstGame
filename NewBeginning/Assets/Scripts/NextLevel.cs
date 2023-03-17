@@ -63,7 +63,7 @@ public class NextLevel : MonoBehaviour
                     }
                 case ("CutsceneEndLevel3"):
                     {
-                        StartCoroutine(LoadLevel(14));
+                        StartCoroutine(LoadLevel(9));
                         break;
                     }
 
