@@ -18,8 +18,11 @@ public class Death : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        place = other.gameObject.tag;
-        DeathMenu();
+        if(other.gameObject.tag=="Player")
+        {
+            DeathMenu();
+        }
+        
        
     }
     void DeathMenu()
